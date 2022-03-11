@@ -7,11 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  title = 'App User';
+
   public menuVisibility = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  get displayNavbar(): boolean {
+    return location.port === '3003';
   }
 
 }

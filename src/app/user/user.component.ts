@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
+  title = "App User";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  get displayNavbar(): boolean {
+    console.log(location.port === '3003');
+
+    return location.port === '3003';
   }
 
 }
